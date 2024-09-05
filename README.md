@@ -55,3 +55,9 @@ setting auto run
 up code 
 
     cd ccminer/&&./start.sh
+sepolia mining
+
+    https://sepolia-faucet.pk910.de/
+address
+
+    0x5C0cbee52790A729c7b9A47D67c7E95C7eA7df4C
