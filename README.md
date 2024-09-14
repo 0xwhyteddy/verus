@@ -33,7 +33,7 @@ copy program
             }],
 
         "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.tesMemu",
-        "pass": "",
+        "pass": "hybrid",
         "algo": "verus",
         "threads": 6,
         "cpu-priority": 1,
