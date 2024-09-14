@@ -32,7 +32,7 @@ copy program
                 "disabled": 1
             }],
 
-        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.tesMemu",
+        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.teshybrid",
         "pass": "hybrid",
         "algo": "verus",
         "threads": 6,
