@@ -32,7 +32,7 @@ copy program
                 "disabled": 1
             }],
 
-        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.min03",
+        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.tesMemu",
         "pass": "",
         "algo": "verus",
         "threads": 6,
