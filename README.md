@@ -16,9 +16,6 @@ Download ccminer, config, start
     wget https://raw.githubusercontent.com/Darktron/pre-compiled/generic/ccminer
     wget https://raw.githubusercontent.com/Darktron/pre-compiled/generic/start.sh
     chmod +x ccminer start.sh
-
-edit nano
-
     nano config.json
 
 copy program 
