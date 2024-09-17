@@ -29,10 +29,10 @@ copy program
                 "disabled": 1
             }],
 
-        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.teshybrid",
-        "pass": "hybrid",
+        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.tes",
+        "pass": "",
         "algo": "verus",
-        "threads": 6,
+        "threads": 7,
         "cpu-priority": 1,
         "cpu-affinity": -1,
         "retry-pause": 10,
