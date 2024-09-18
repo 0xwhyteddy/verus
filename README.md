@@ -26,7 +26,7 @@ copy program
                 "disabled": 1
             }],
 
-        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.win365",
+        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.8Core",
         "pass": "hybrid",
         "algo": "verus",
         "threads": 8,
