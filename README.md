@@ -27,7 +27,7 @@ copy program
             }],
 
         "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.win365",
-        "pass": "",
+        "pass": "hybrid",
         "algo": "verus",
         "threads": 7,
         "cpu-priority": 1,
