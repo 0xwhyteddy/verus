@@ -26,8 +26,8 @@ copy program
                 "disabled": 1
             }],
 
-        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.8Core",
-        "pass": "",
+        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.8CoreHybrid",
+        "pass": "hybrid",
         "algo": "verus",
         "threads": 8,
         "cpu-priority": 1,
