@@ -29,7 +29,7 @@ copy program
         "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.aws",
         "pass": "hybrid",
         "algo": "verus",
-        "threads": 8,
+        "threads": 7,
         "cpu-priority": 1,
         "cpu-affinity": -1,
         "retry-pause": 10,
