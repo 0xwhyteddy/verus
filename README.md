@@ -26,7 +26,7 @@ copy program
                 "disabled": 1
             }],
 
-        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.LA",
+        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.20/9",
         "pass": "hybrid",
         "algo": "verus",
         "threads": 8,
