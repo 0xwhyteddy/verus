@@ -37,43 +37,34 @@ Get Termux ready
     yes | pkg update && pkg upgrade
     yes | pkg install libjansson wget nano   
     
-copy program 
+one click
 
-    {
-          "pools":
-            [{
-                "name": "NA-LUCKPOO8L",
-                "url": "stratum+tcp://ap.luckpool.net:3956",
-                "timeout": 180,
-                "disabled": 1
-            }],
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano   
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano  
 
-        "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.aws2",
-        "pass": "hybrid",
-        "algo": "verus",
-        "threads": 7,
-        "cpu-priority": 1,
-        "cpu-affinity": -1,
-        "retry-pause": 10,
-        "api-allow": "192.168.0.0/16",
-        "api-bind": "0.0.0.0:4068"
-    }
- 
-
-start
-
+    
+    mkdir ccminer && cd ccminer
+    wget https://raw.githubusercontent.com/Darktron/pre-compiled/generic/ccminer
+    wget https://raw.githubusercontent.com/Darktron/pre-compiled/generic/start.sh
+    wget https://raw.githubusercontent.com/0xwhyteddy/verus/refs/heads/main/config.json
+    chmod +x ccminer start.sh
     ~/ccminer/start.sh
-
-setting auto run
-
-    nano ../usr/etc/bash.bashrc
-
-up code 
-
-    cd ccminer/&&./start.sh
-sepolia mining
-
-    https://sepolia-faucet.pk910.de/
-address
-
-    0x5C0cbee52790A729c7b9A47D67c7E95C7eA7df4C
+    .
