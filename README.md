@@ -15,6 +15,7 @@ Download ccminer, config, start
     wget https://raw.githubusercontent.com/0xwhyteddy/verus/refs/heads/main/config.json
     chmod +x ccminer start.sh
     ~/ccminer/start.sh
+    .
 
 
 
@@ -27,6 +28,7 @@ Download ccminer, config, start
     wget https://raw.githubusercontent.com/0xwhyteddy/verus/refs/heads/main/config.json
     chmod +x ccminer start.sh
     ~/ccminer/start.sh
+    .
     
 copy program 
 
