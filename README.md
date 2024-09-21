@@ -16,11 +16,6 @@ Download ccminer, config, start
     chmod +x ccminer start.sh
     ~/ccminer/start.sh
     .
-
-
-
-    
-
 Download ccminer, config, start
 
     cd ccminer
@@ -29,6 +24,18 @@ Download ccminer, config, start
     chmod +x ccminer start.sh
     ~/ccminer/start.sh
     .
+Get Termux ready
+
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano
+    yes | pkg update && pkg upgrade
+    yes | pkg install libjansson wget nano   
     
 copy program 
 
