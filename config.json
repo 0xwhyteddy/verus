@@ -7,10 +7,10 @@
             "disabled": 1
         }],
 
-    "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.uji",
+    "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.halo",
     "pass": "",
     "algo": "verus",
-    "threads": 7,
+    "threads": 8,
     "cpu-priority": 1,
     "cpu-affinity": -1,
     "retry-pause": 10,
