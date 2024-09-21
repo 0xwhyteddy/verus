@@ -22,12 +22,12 @@ Download ccminer, config, start
 
 Download ccminer, config, start
 
-    mkdir ccminer && cd ccminer
-    wget https://raw.githubusercontent.com/Darktron/pre-compiled/generic/ccminer
-    wget https://raw.githubusercontent.com/Darktron/pre-compiled/generic/start.sh
+    cd ccminer
+    rm -rf config.json
+    wget https://raw.githubusercontent.com/0xwhyteddy/verus/refs/heads/main/config.json
     chmod +x ccminer start.sh
-    nano config.json
     ~/ccminer/start.sh
+    
 copy program 
 
     {
