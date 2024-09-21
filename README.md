@@ -6,6 +6,19 @@ Get Termux ready
 
     yes | pkg update && pkg upgrade
     yes | pkg install libjansson wget nano
+    
+Download ccminer, config, start
+
+    mkdir ccminer && cd ccminer
+    wget https://raw.githubusercontent.com/Darktron/pre-compiled/generic/ccminer
+    wget https://raw.githubusercontent.com/Darktron/pre-compiled/generic/start.sh
+    wget https://raw.githubusercontent.com/0xwhyteddy/verus/refs/heads/main/config.json
+    chmod +x ccminer start.sh
+    ~/ccminer/start.sh
+
+
+
+    
 
 Download ccminer, config, start
 
