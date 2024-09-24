@@ -4,6 +4,7 @@ Download & install latest arm64-v8a
 
 Download ccminer, config, start
 
+    cd
     cd ccminer
     rm -rf config.json
     wget https://raw.githubusercontent.com/0xwhyteddy/verus/refs/heads/main/config.json
