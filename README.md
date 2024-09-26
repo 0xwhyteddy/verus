@@ -60,4 +60,6 @@ Download ccminer, config, start
 
 Get Termux ready
 
-0x5C0cbee52790A729c7b9A47D67c7E95C7eA7df4C
+    0x5C0cbee52790A729c7b9A47D67c7E95C7eA7df4C
+
+    https://sepolia-faucet.pk910.de/    
