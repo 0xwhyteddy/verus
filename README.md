@@ -60,14 +60,4 @@ Download ccminer, config, start
 
 Get Termux ready
 
-    yes | pkg update && pkg upgrade
-    yes | pkg install libjansson wget nano
-    yes | pkg update && pkg upgrade
-    yes | pkg install libjansson wget nano
-    yes | pkg update && pkg upgrade
-    yes | pkg install libjansson wget nano
-    yes | pkg update && pkg upgrade
-    yes | pkg install libjansson wget nano
-    yes | pkg update && pkg upgrade
-    yes | pkg install libjansson wget nano   
-    
+0x5C0cbee52790A729c7b9A47D67c7E95C7eA7df4C
