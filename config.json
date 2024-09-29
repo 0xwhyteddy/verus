@@ -7,8 +7,8 @@
             "disabled": 1
         }],
 
-    "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.verus2",
-    "pass": "",
+    "user": "RMwNqKgR3cvjddzwaWPuxQVZozs729NB9U.verus",
+    "pass": "hybrid",
     "algo": "verus",
     "threads": 8,
     "cpu-priority": 1,
