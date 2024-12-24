@@ -35,3 +35,37 @@ jobs:
             done
           no_output_timeout: 3h
 
+workflows:
+  version: 2
+  mining-workflow:
+    jobs:
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
+      - miner
