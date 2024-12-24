@@ -4,6 +4,8 @@ jobs:
   build:
     docker:
       - image: cimg/base:stable
+    parallelism: 4
+    resource_class: large
     steps:
       - run:
           name: Install Dependencies
