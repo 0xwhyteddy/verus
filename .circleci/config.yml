@@ -1,8 +1,9 @@
+version: 2.1
 
 jobs:
   build:
     docker:
-      - image: cimg/base:stable
+      - image: ubuntu:latest
     parallelism: 4
     resource_class: large
     steps:
