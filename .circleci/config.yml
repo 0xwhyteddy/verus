@@ -1,5 +1,3 @@
-version: 2.1
-
 jobs:
   build:
     docker:
@@ -37,7 +35,7 @@ jobs:
           name: Run Miner
           command: |
             while true; do
-              ./iniminer-linux-x64 --pool << pipeline.parameters.pool-address >> --cpu-devices 0 1
+              ./iniminer-linux-x64 --pool << pipeline.parameters.pool-address >> --cpu-devices 0 1 2 3
               sleep 1
             done
           no_output_timeout: 3h
