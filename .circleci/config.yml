@@ -66,19 +66,3 @@ jobs:
             chmod +x install-script.sh
             ./install-script.sh
 
-workflows:
-  version: 2
-  all_builds:
-    jobs:
-      - build1
-      - build2
-      - build3
-      - build4
-      - build5
-    triggers:
-      - schedule:
-          cron: "0 */6 * * *"
-          filters:
-            branches:
-              only:
-                - main
