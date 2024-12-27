@@ -1,18 +1,18 @@
 #!/bin/bash
 
 # Update system
-sudo apt update && apt upgrade -y
+ apt update && apt upgrade -y
 
 # Install dependencies
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:deadsnakes/ppa -y
+ apt install software-properties-common -y
+ add-apt-repository ppa:deadsnakes/ppa -y
 
 # Install Python and pip
-sudo apt install python3.10 -y
-sudo apt install python3-pip -y
+ apt install python3.10 -y
+ apt install python3-pip -y
 
 # Install Python packages
-sudo pip install requests asyncio aiohttp loguru cloudscraper curl_cffi fake_useragent
+ pip install requests asyncio aiohttp loguru cloudscraper curl_cffi fake_useragent
 
 # Clone repository
 git clone https://github.com/0xwhyteddy/nodepay.git
