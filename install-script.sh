@@ -12,9 +12,20 @@
  apt install python3-pip -y
  apt-get install -y python3
 
-# Install Python packages
- pip install requests asyncio aiohttp loguru cloudscraper curl_cffi fake_useragent
-
+# Install Python packages    
+  apt-get install -y git python3-venv
+  python -m venv venv
+  source venv/bin/activate
+  pip install --upgrade pip
+  pip install cloudscraper
+  pip install requests
+  pip install asyncio
+  pip install aiohttp
+  pip install loguru
+  pip install cloudscraper
+  pip install curl_cffi
+  pip install fake_useragent
+  
 # Clone repository
 git clone https://github.com/0xwhyteddy/nodepay.git
 
