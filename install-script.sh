@@ -10,6 +10,7 @@
 # Install Python and pip
  apt install python3.10 -y
  apt install python3-pip -y
+ apt-get install -y python3
 
 # Install Python packages
  pip install requests asyncio aiohttp loguru cloudscraper curl_cffi fake_useragent
